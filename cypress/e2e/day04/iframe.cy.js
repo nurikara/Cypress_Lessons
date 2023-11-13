@@ -1,5 +1,5 @@
 
-//import 'cypress-iframe';
+import 'cypress-iframe';
 describe('iframes', function() {
 it('first way', () => {
     cy.visit('https://the-internet.herokuapp.com/iframe')
