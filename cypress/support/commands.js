@@ -24,6 +24,22 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+
+
+// Cypress.Commands.add('customClickIfVisible', (locator) => {
+//     cy.get(locator).should('be.visible').then(($el) => {
+//       if ($el.length > 0) {
+//         cy.get(locator).contains(userdata.expected);
+//         cy.wait(3000)
+//         cy.get('[class="oxd-topbar-header-breadcrumb"]').click()
+//         cy.get('[class="oxd-dropdown-menu"]>li:nth-child(4)').click()
+//       } else {
+//         cy.log(`Element with locator "${locator}" is not visible.`);
+//       }
+//     });
+//   });
+
+
 /// <reference types="cypress" />
 /// <reference types="cypress-xpath" />
 
@@ -36,5 +52,7 @@ Cypress.Commands.add('getIframe', (iframe) => {
  
 })
 
+Cypress.Commands.add('clickLink', (lable) => {
 
-
+    cy.get('a').contains(lable).click()
+})
