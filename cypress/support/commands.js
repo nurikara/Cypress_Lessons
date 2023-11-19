@@ -54,5 +54,17 @@ Cypress.Commands.add('getIframe', (iframe) => {
 
 Cypress.Commands.add('clickLink', (lable) => {
 
-    cy.get('a').contains(lable).click()
+    cy.get('a').contains(lable,{matchCase:false}).click()
 })
+
+Cypress.Commands.add('loginWeb', (mail,password) => {
+
+cy.get('#Email').type(mail)
+cy.get('#Password').type(password)
+
+cy.get('[class="button-1 login-button"]').click()
+
+
+
+})
+
