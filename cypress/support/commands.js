@@ -53,5 +53,27 @@ Cypress.Commands.add('getIframe', (iframe) => {
 })
 
 
+Cypress.Commands.add('clinkLink', (label) => {
+
+   cy.get('a').contains(label).click()
+ 
+})
+
+Cypress.Commands.add('loginWeb', (mail,password) => {
+
+    cy.get('.ico-login').click()
+
+    cy.get('#Email').type(mail)
+
+    cy.get('#Password').type(password)
+
+    cy.get('form > .buttons > .button-1').click()
+
+
+
+  
+ })
+
+
 
 

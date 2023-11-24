@@ -9,7 +9,7 @@ module.exports = defineConfig({
    
     },
   },
- // videosFolder: 'cypress/videos', // Videoların kaydedileceği klasör
-  video: true, // Video kaydını etkinleştir
- // screenshotsFolder: false, // Screenshot özelliğini devre dışı bırak
+  videosFolder: 'cypress/nurivideos', // Videoların kaydedileceği klasör
+ video: true, // Video kaydını etkinleştir
+ screenshotsFolder: false, // Screenshot özelliğini devre dışı bırak
 });
